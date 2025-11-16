@@ -16,7 +16,7 @@ public class TeacherController {
 	@Autowired
     TeacherRepository teacherRepository;	
 	
-      @PostMapping("teacher")
+      @PostMapping("saveteacher")
 	  ResponseEntity getTeacher(@RequestBody Teacher teacher) {
 		  teacherRepository.save(teacher);
 		  return new ResponseEntity(HttpStatus.CREATED);
